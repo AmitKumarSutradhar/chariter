@@ -23,7 +23,7 @@
                             <li><a href="contact.html">Contact</a></li>
                             <li>
                                 <div class="header-right-btn f-right  ml-15">
-                                    <a href="login.html" class="header-btn">Login</a>
+                                    <a href="{{ route('login') }}" class="header-btn">Login</a>
                                 </div>
                             </li>
                         </ul>

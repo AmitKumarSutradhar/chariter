@@ -16,6 +16,7 @@ use App\Http\Controllers\Front\WebsiteController;
 
 Route::get('/', [WebsiteController::class,'home'])->name('home');
 Route::get('/category-blogs', [WebsiteController::class,'categoryBlogs'])->name('category-blogs');
+Route::get('/blog-details', [WebsiteController::class,'blogDetails'])->name('blog-details');
 
 
 
