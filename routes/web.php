@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Front\WebsiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WebsiteController::class,'home'])->name('home');
+Route::get('/category-blogs', [WebsiteController::class,'categoryBlogs'])->name('category-blogs');
+
+
+
+
 
 Route::middleware([
     'auth:sanctum',
