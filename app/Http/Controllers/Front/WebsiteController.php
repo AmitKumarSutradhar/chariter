@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\BlogCategory;
 use Illuminate\Http\Request;
 
 class WebsiteController extends Controller

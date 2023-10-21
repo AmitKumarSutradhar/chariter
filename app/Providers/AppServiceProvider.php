@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Backend\BlogCategory;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +21,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        View::composer('frontend.includes.header-bottom', function($view){
+            $view->with('blogCategories', BlogCategory::where('status',1)->get());
+        });
     }
 }

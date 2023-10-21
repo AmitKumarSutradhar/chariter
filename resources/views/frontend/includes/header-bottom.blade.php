@@ -16,8 +16,9 @@
                             <li><a href="about.html">About</a></li>
                             <li><a href="javascript:void(0)">Blog Categories</a>
                                 <ul class="submenu">
-                                    <li><a href="{{ route('category-blogs') }}">Blog One</a></li>
-                                    <li><a href="{{ route('category-blogs') }}">Blog Two</a></li>
+                                    @foreach($blogCategories as $blogCategory)
+                                        <li><a href="{{ route('category-blogs') }}">{{ $blogCategory->name }}</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li><a href="contact.html">Contact</a></li>

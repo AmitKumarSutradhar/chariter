@@ -31,7 +31,7 @@ class BlogCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        BlogCategory::updateOrCreate($request);
+        BlogCategory::updateOrCreateBlogCategory($request);
         return back()->with('success','Blog Category created successfully.');
     }
 
@@ -58,8 +58,8 @@ class BlogCategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        BlogCategory::updateOrCreate($request, $id);
-        return back()->with('success','Blog Category updated successfully.');
+        BlogCategory::updateOrCreateBlogCategory($request, $id);
+        return redirect()->route('blog-categories.index')->with('success','Blog Category updated successfully.');
     }
 
     /**
